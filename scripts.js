@@ -11,9 +11,11 @@ $(document).ready(function(){
         });
 
     }
+    
     function kFormatter(num) {
-        return num > 999 ? (num/1000).toFixed(1) + 'k' : num
+        return num > 999 ? num % 1000 === 0 ? (num/1000).toFixed(0) + 'k' : (num/1000).toFixed(1) + 'k' : num
     }
+    
    var myalert = function() {
        // get an array of child nodes
        var rows = $('#Apps').children()[0].rows;
