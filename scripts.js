@@ -7,7 +7,7 @@ $(document).ready(function(){
 
         $.getJSON("https://itunes.apple.com/lookup/json?id=" + appid + "&callback=?", function( json ) {
             //appHeading.innerHTML = appHeading.innerHTML + ":&nbsp&nbsp&nbsp&nbsp" + (json.results[0].fileSizeBytes/1024/1024).toPrecision(2) + " MB " + "&nbsp&nbsp&nbsp&nbsp&nbspversion: "+json.results[0].version + "&nbsp&nbsp&nbsp&nbsp&nbspavg rating:&nbsp&nbsp"+json.results[0].averageUserRatingForCurrentVersion + "&nbsp&nbsp&nbsp&nbsp&nbspminOS&nbsp&nbsp: "+json.results[0].minimumOsVersion + "&nbsp&nbsp&nbsp&nbsp&nbspratingCount tot/cur :&nbsp&nbsp"+json.results[0].userRatingCount+" / "+json.results[0].userRatingCountForCurrentVersion;
-            appHeading.innerHTML = appHeading.innerHTML + "<td>"+(json.results[0].fileSizeBytes/1024/1024).toFixed(2) + " MB "+"<\/td>" + "<td>"+json.results[0].version+"<\/td> <td>"+json.results[0].averageUserRatingForCurrentVersion+"<\/td> <td>"+json.results[0].minimumOsVersion+"<\/td> <td>"+json.results[0].userRatingCount+"<\/td> <td>"+json.results[0].userRatingCountForCurrentVersion+"<\/td>";
+            appHeading.innerHTML = appHeading.innerHTML + "<td>"+(json.results[0].fileSizeBytes/1024/1024).toFixed(2) + " MB "+"<\/td>" + "<td>"+json.results[0].version+"<\/td> <td>"+json.results[0].averageUserRatingForCurrentVersion+"<\/td> <td>"+"<\/td> <td>"+json.results[0].averageUserRatingFor+"<\/td> <td>"+json.results[0].minimumOsVersion+"<\/td> <td>"+json.results[0].userRatingCount+"<\/td> <td>"+json.results[0].userRatingCountForCurrentVersion+"<\/td>";
         });
 
     }
